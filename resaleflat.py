@@ -79,7 +79,7 @@ def main():
         with col1:
                 st.image('https://media2.malaymail.com/uploads/articles/2020/2020-07/20200725_Singapore-HDB.jpg', use_column_width=True)
         with col2:
-                st.image('https://dollarsandsense.sg/wp-content/uploads/2020/09/nguyen-thu-hoai-a15b7LYrfbk-unsplash.jpg', use_column_width=True)
+                st.image('https://miro.medium.com/v2/resize:fit:1400/0*hn4nICHk9Cq-tugt.jpeg', use_column_width=True)
 
 
     #user input values for selectbox and encoded for respective features
@@ -215,6 +215,18 @@ def main():
     # set up the information for 'Home' menu
     if selected == "Explore":
         st.markdown('<br>', unsafe_allow_html=True)  # Add some space before the topic
+        st.subheader(':Red[About Housing & Development Board]')
+
+        st.info('''<ul style='color:#D0D3D4;font-size:20px'>
+        <li>The Housing & Development Board (HDB; often referred to as the Housing Board), is a statutory board under the Ministry of National Development responsible for the public housing in Singapore.</li>
+        <li>Established in 1960 as a result of efforts in the late 1950s to set up an authority to take over the Singapore Improvement Trust's (SIT) public housing responsibilities.</li>
+        <li>The HDB focused on the construction of emergency housing and the resettlement of kampong residents into public housing in the first few years of its existence.</li>
+        <li>In the 1990s and 2000s, the HDB introduced upgrading and redevelopment schemes for mature estates, as well as new types of housing intended to cater to different income groups in partnership with private developers.</li>
+        <li>The HDB was reorganized in 2003 to better suit Singapore's housing market in the 2000s.</li>
+        </ul>''',unsafe_allow_html=True)
+
+        
+    '''
         st.subheader(':green[Exploratory Data Analysis]')
         df = pd.read_csv('df.csv')
         col1, col2 = st.columns(2, gap='large')
@@ -261,12 +273,10 @@ def main():
                         title='Top 10 Flat Models', labels={'Count': 'Number of Flats', 'Flat Model': 'Flat Model'},
                         color='Flat Model', color_discrete_sequence=px.colors.sequential.Inferno)
             st.plotly_chart(fig, use_container_width=True)
-
-
+'''
 
     st.markdown(" ")
     st.markdown(" ")
-
 
 if __name__ == "__main__":
     main()
