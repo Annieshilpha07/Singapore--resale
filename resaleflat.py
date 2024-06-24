@@ -69,11 +69,7 @@ def main():
             st.image("https://j.gifs.com/66jXYL.gif", use_column_width=True)
             st.write("----")
             st.markdown("  ")
-            # df = pd.read_csv(r"data_description.csv")
-            st.markdown("  ")
-            if st.button("## :rainbow[ About Data - Click to view the raw data]"):
-                raw_data = pd.read_csv('resalenew.csv')
-                st.write(raw_data)
+
 
         col1, col2 = st.columns([2, 2])
         with col1:
