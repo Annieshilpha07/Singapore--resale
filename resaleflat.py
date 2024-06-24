@@ -228,7 +228,7 @@ def main():
         
     '''
         st.subheader(':green[Exploratory Data Analysis]')
-        df = pd.read_csv('df.csv')
+        #df = pd.read_csv('df.csv')
         col1, col2 = st.columns(2, gap='large')
         col3 = st.columns(2)[0] 
 
