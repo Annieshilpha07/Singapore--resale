@@ -212,64 +212,13 @@ def main():
     if selected == "Explore":
         st.markdown('<br>', unsafe_allow_html=True)  # Add some space before the topic
         st.subheader(':Red[About Housing & Development Board]')
-
-        st.info('''<ul style='color:#D0D3D4;font-size:20px'>
-        <li>The Housing & Development Board (HDB; often referred to as the Housing Board), is a statutory board under the Ministry of National Development responsible for the public housing in Singapore.</li>
-        <li>Established in 1960 as a result of efforts in the late 1950s to set up an authority to take over the Singapore Improvement Trust's (SIT) public housing responsibilities.</li>
-        <li>The HDB focused on the construction of emergency housing and the resettlement of kampong residents into public housing in the first few years of its existence.</li>
-        <li>In the 1990s and 2000s, the HDB introduced upgrading and redevelopment schemes for mature estates, as well as new types of housing intended to cater to different income groups in partnership with private developers.</li>
-        <li>The HDB was reorganized in 2003 to better suit Singapore's housing market in the 2000s.</li>
-        </ul>''',unsafe_allow_html=True)
-
-        
-    '''
-        st.subheader(':green[Exploratory Data Analysis]')
-        #df = pd.read_csv('df.csv')
-        col1, col2 = st.columns(2, gap='large')
-        col3 = st.columns(2)[0] 
-
-        with col1:
-            st.subheader('1. Price per sqm Distribution histplot over the year (1990-2024)')
-            fig = px.histogram(df, x='price_per_sqm', nbins=30, title='Price per sqm Distribution Count',
-                            labels={'price_per_sqm': 'Price per sqm'})
-            fig.update_layout(bargap=0.1)
-            st.plotly_chart(fig, use_container_width=True)
-
-            st.subheader('3. Average Price per sqm by Flat Type')
-            mean_price_per_sqm = df.groupby('flat_type')['price_per_sqm'].mean().reset_index()
-            fig_horizontal = px.bar(mean_price_per_sqm, x='price_per_sqm', y='flat_type', orientation='h', title='Average Price per sqm by Flat Type',
-                                    labels={'flat_type': 'Flat Type', 'price_per_sqm': 'Average Price per sqm'}, color='flat_type',
-                                    color_discrete_sequence=px.colors.sequential.Plasma)
-            fig_horizontal.update_layout(plot_bgcolor='white', xaxis_showgrid=True, yaxis_showgrid=False)
-            st.plotly_chart(fig_horizontal, use_container_width=True)
-
-        with col2:
-            st.subheader('2. Number of Flats based on Flat Type')
-            flat_type_counts = df['flat_type'].value_counts().reset_index()
-            flat_type_counts.columns = ['Flat Type', 'Count']
-            fig = px.pie(flat_type_counts, values='Count', names='Flat Type', title='Number of Flats by Flat Type',
-                        hover_data={'Count': True}, color_discrete_sequence=px.colors.qualitative.Bold)
-            st.plotly_chart(fig, use_container_width=True)
-
-
-            st.subheader('4. Distribution of Flat Types by Average floor Area sqm')
-            mean_price_per_sqm = df.groupby('flat_type')['floor_area_sqm'].mean().reset_index()
-            fig = px.bar(mean_price_per_sqm, x='flat_type', y='floor_area_sqm', title='Average floor Area sqm by Flat Type',
-                        labels={'flat_type': 'Flat Type', 'floor_area_sqm': 'Average floor Area sqm'},
-                        hover_data={'floor_area_sqm': ':.2f'}, color='flat_type', color_discrete_sequence=px.colors.sequential.Viridis)
-            fig.update_layout(xaxis_tickangle=45, plot_bgcolor='white')
-            st.plotly_chart(fig, use_container_width=True)
-            
-        with col3:
-            st.subheader('5.Top 10 Flat Models')
-            top_flat_models = df['flat_model'].value_counts().nlargest(10)
-            top_flat_models_df = pd.DataFrame({'Flat Model': top_flat_models.index, 'Count': top_flat_models.values})
-
-            fig = px.bar(top_flat_models_df, x='Count', y='Flat Model', orientation='h', 
-                        title='Top 10 Flat Models', labels={'Count': 'Number of Flats', 'Flat Model': 'Flat Model'},
-                        color='Flat Model', color_discrete_sequence=px.colors.sequential.Inferno)
-            st.plotly_chart(fig, use_container_width=True)
-'''
+        st.info('''
+        - The Housing & Development Board (HDB; often referred to as the Housing Board), is a statutory board under the Ministry of National Development responsible for the public housing in Singapore.
+        - Established in 1960 as a result of efforts in the late 1950s to set up an authority to take over the Singapore Improvement Trust's (SIT) public housing responsibilities.
+        - The HDB focused on the construction of emergency housing and the resettlement of kampong residents into public housing in the first few years of its existence.
+        - In the 1990s and 2000s, the HDB introduced upgrading and redevelopment schemes for mature estates, as well as new types of housing intended to cater to different income groups in partnership with private developers.
+        - The HDB was reorganized in 2003 to better suit Singapore's housing market in the 2000s.
+        ''')
 
     st.markdown(" ")
     st.markdown(" ")
