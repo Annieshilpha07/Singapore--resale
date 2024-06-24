@@ -44,5 +44,8 @@ To simplify price estimation in the competitive Singapore housing market, aiding
 ## Data Source
 [Singapore Resale Flat Prices Dataset](https://beta.data.gov.sg/collections/189/view)
 
+## Live APP : 
+[Singapore Resale Rendar](https://singapore-resale-2-kp37.onrender.com)
+
 ## Results
 This project benefits buyers and sellers in Singapore by providing accurate price estimates. It also demonstrates the practical use of machine learning in real estate.
