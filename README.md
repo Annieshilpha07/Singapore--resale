@@ -2,6 +2,10 @@
 
 Welcome to the Singapore Resale Flat Prices Prediction project! This repository contains everything you need to predict the resale prices of flats in Singapore using machine learning and a user-friendly web application.
 
+## Live APP : 
+[Singapore Resale price Prediction- Rendar](https://singapore-resale-2-kp37.onrender.com)
+
+
 ## Project Overview
 This project aims to assist buyers and sellers in the Singapore housing market by providing accurate resale price estimates based on historical data. Key factors such as location, flat type, floor area, and lease duration are considered in the prediction.
 
@@ -15,10 +19,7 @@ This project aims to assist buyers and sellers in the Singapore housing market b
 Real Estate
 
 ## Problem Statement
-Estimating the resale value of flats in Singapore is challenging due to various influencing factors. This project develops a machine learning model to provide accurate resale price estimates, helping users make informed decisions.
-
-## Motivation
-To simplify price estimation in the competitive Singapore housing market, aiding buyers and sellers with accurate and accessible information.
+Estimating the resale value of flats in Singapore is challenging due to various influencing factors. This project develops a machine learning model to provide accurate resale price estimates, helping users make informed decisions. To simplify price estimation in the competitive Singapore housing market, aiding buyers and sellers with accurate and accessible information.
 
 ## Project Scope
 
@@ -43,9 +44,6 @@ To simplify price estimation in the competitive Singapore housing market, aiding
 
 ## Data Source
 [Singapore Resale Flat Prices Dataset](https://beta.data.gov.sg/collections/189/view)
-
-## Live APP : 
-[Singapore Resale Rendar](https://singapore-resale-2-kp37.onrender.com)
 
 ## Results
 This project benefits buyers and sellers in Singapore by providing accurate price estimates. It also demonstrates the practical use of machine learning in real estate.
