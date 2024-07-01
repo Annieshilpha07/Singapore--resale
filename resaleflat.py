@@ -212,13 +212,15 @@ def main():
     if selected == "Explore":
         st.markdown('<br>', unsafe_allow_html=True)  # Add some space before the topic
         st.subheader(':Red[About Housing & Development Board]')
-        st.info('''
-        - The Housing & Development Board (HDB; often referred to as the Housing Board), is a statutory board under the Ministry of National Development responsible for the public housing in Singapore.
-        - Established in 1960 as a result of efforts in the late 1950s to set up an authority to take over the Singapore Improvement Trust's (SIT) public housing responsibilities.
-        - The HDB focused on the construction of emergency housing and the resettlement of kampong residents into public housing in the first few years of its existence.
-        - In the 1990s and 2000s, the HDB introduced upgrading and redevelopment schemes for mature estates, as well as new types of housing intended to cater to different income groups in partnership with private developers.
-        - The HDB was reorganized in 2003 to better suit Singapore's housing market in the 2000s.
-        ''')
+        col1, col2 = st.columns([3, 1])
+        with col1:
+            st.info('''
+            - 🏠 The Housing & Development Board (HDB; often referred to as the Housing Board), is a statutory board under the Ministry of National Development responsible for the public housing in Singapore.
+            - Established in 1960 as a result of efforts in the late 1950s to set up an authority to take over the Singapore Improvement Trust's (SIT) public housing responsibilities.
+            - The HDB focused on the construction of emergency housing and the resettlement of kampong residents into public housing in the first few years of its existence.
+            - In the 1990s and 2000s, the HDB introduced upgrading and redevelopment schemes for mature estates, as well as new types of housing intended to cater to different income groups in partnership with private developers.
+            - The HDB was reorganized in 2003 to better suit Singapore's housing market in the 2000s.
+            ''')
 
     st.markdown(" ")
     st.markdown(" ")
