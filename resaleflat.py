@@ -141,7 +141,7 @@ def main():
                 
                 block = st.number_input(label='Block (1 to 999)', min_value=1, max_value=999, step=1)
                 
-                lease_commence_date = st.text_input(label='Year of lease commence', max_chars=4)
+                lease_commence_date = st.text_input(label='Year of lease commence (1966 to 2020)', max_chars=4)
                 
                 remaining_lease = st.number_input(label='Remaining lease year (0 to 99)', min_value=0, max_value=99, step=1)
                 
